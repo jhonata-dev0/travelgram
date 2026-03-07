@@ -2,39 +2,47 @@ header {
   padding: 32px;
 }
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header #profile {
+header .container1 {
   display: flex;
   gap: 32px;
-  align-items: center;
+  align-items: flex-start;
 }
 
-#profile > div{
-  max-width: 384px;
+header .profile {
+  flex-shrink: 0;
 }
 
-#profile h1 {
+header .profile img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+header .container1 > div:not(.profile) {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+header h1 {
   font: var(--text-lg);
   color: var(--text-color-primary);
   margin-bottom: 8px;
-
 }
 
-#profile p {
+header .container1 > *:not(.profile) > p {
   font: var(--text-md);
+  margin-bottom: 16px;
+  max-width: 384PX;
 }
 
-#info { 
+#info {
   list-style: none;
-display: flex;
-flex-direction: column;
-gap: 16px;
-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 280px;
 }
 
 #info li {
