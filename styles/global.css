@@ -25,7 +25,14 @@ body {
   font: var(--text-md);
   color:var(--text-color-secondary);
   background-color: var(--background-color);
+  min-height: 100vh;
 
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -39,7 +46,7 @@ text-decoration: underline;
 }
 
 .container {
- padding-inline: 32px;
+ padding-inline: clamp(16px, 4vw, 32px);
  max-width: 1280px;
  margin-inline: auto;
 
@@ -47,4 +54,26 @@ text-decoration: underline;
 
 .bg-surface-color {
 background-color: var(--surface-color);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --text-lg: bold 28px/130% var(--font-family);
+    --text-base: 15px/160% var(--font-family);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --text-lg: bold 24px/130% var(--font-family);
+    --text-base: 14px/160% var(--font-family);
+  }
+
+  body {
+    font: var(--text-base);
+  }
+
+  .container {
+    padding-inline: 16px;
+  }
 }

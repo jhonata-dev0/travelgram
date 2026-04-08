@@ -1,9 +1,26 @@
+/* página: styles/footer.css */
+/* canal: rodapé */
 footer {
   display: flex;
+  flex-wrap: wrap;
   padding-block: 24px;
-  gap: 24px;
+  gap: 16px;
+  align-items: center;
 }
 
 footer span:nth-child(1) {
-margin-right: auto;
+  margin-right: auto;
+}
+
+/* canal: rodapé móvel */
+@media (max-width: 640px) {
+  footer {
+    justify-content: center;
+    text-align: center;
+  }
+
+  footer span:nth-child(1) {
+    margin-right: 0;
+    width: 100%;
+  }
 }

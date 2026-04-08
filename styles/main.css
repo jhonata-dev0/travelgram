@@ -1,14 +1,14 @@
+/* página: styles/main.css */
+/* canal: galeria de fotos */
 main {
-  display: flex;
-flex-wrap: wrap;
-gap: 24px;
-padding-block: 24px;
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  padding-block: 32px;
 }
 
 main img {
- width: 286px;
-  height: 286px;
+  width: 100%;
+  border-radius: 20px;
   object-fit: cover;
-  
 }

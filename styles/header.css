@@ -1,11 +1,14 @@
-header {
-  padding: 32px;
+/* página: styles/header.css */
+/* canal: cabeçalho */
+header .container{
+  padding: 32px 0;
 }
 
 header .container1 {
   display: flex;
   gap: 32px;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 header .profile {
@@ -23,6 +26,7 @@ header .container1 > div:not(.profile) {
   display: flex;
   flex-direction: column;
   flex: 1;
+  min-width: 0;
 }
 
 header h1 {
@@ -31,22 +35,52 @@ header h1 {
   margin-bottom: 8px;
 }
 
-header .container1 > *:not(.profile) > p {
+header .container1 > div:not(.profile) > p {
   font: var(--text-md);
   margin-bottom: 16px;
-  max-width: 384PX;
+  max-width: 100%;
 }
 
+/* canal: informações do perfil */
 #info {
   list-style: none;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 16px;
-  width: 280px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 #info li {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+/* canal: responsivo do cabeçalho */
+@media (max-width: 900px) {
+  header .container1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header .profile {
+    margin: 0 auto;
+  }
+
+  #info {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  header {
+    padding: 24px 0;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
 }
