@@ -1,5 +1,3 @@
-/* página: styles/header.css */
-/* canal: cabeçalho */
 header .container{
   padding: 32px 0;
 }
@@ -41,7 +39,7 @@ header .container1 > div:not(.profile) > p {
   max-width: 100%;
 }
 
-/* canal: informações do perfil */
+
 #info {
   list-style: none;
   display: flex;
@@ -58,7 +56,7 @@ header .container1 > div:not(.profile) > p {
   gap: 8px;
 }
 
-/* canal: responsivo do cabeçalho */
+
 @media (max-width: 900px) {
   header .container1 {
     flex-direction: column;

@@ -1,5 +1,3 @@
-/* página: styles/main.css */
-/* canal: galeria de fotos */
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
